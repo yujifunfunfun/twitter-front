@@ -4,7 +4,7 @@ import React, { memo } from 'react';
 import { Textarea, Flex } from "@chakra-ui/react";
 import { MyProfileImg } from '@/components/atoms/MyProfileImg';
 
-export const UserProfilePostCreator = memo(() => {
+export const ProfileImgPostCreator = memo(() => {
   return (
     <Flex w='100%'>
       <MyProfileImg size='md' />
