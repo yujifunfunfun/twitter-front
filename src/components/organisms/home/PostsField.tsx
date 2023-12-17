@@ -18,12 +18,10 @@ export const PostsField = memo(() => {
       <TabPanels>
         <TabPanel p='0'>
           <DisplayNewRecommendPosts />
-          <Divider />
           <p>one!</p>
         </TabPanel>
         <TabPanel p='0'>
           <DisplayNewFollowingPosts />
-          <Divider />
           <p>two!</p>
         </TabPanel>
       </TabPanels>
