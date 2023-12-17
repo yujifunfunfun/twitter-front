@@ -1,7 +1,6 @@
 'use client'
 
 import { Avatar, Box, Flex } from "@chakra-ui/react";
-import { ProfileImg } from "../atoms/ProfileImg";
 import { memo } from 'react';
 import { UserName } from "../atoms/UserName";
 import { UserId } from "../atoms/UserId";

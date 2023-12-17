@@ -1,12 +1,13 @@
 'use client'
 
 import React, { memo } from 'react';
-import { Avatar, Textarea, Flex } from "@chakra-ui/react";
+import { Textarea, Flex } from "@chakra-ui/react";
+import { MyProfileImg } from '@/components/atoms/MyProfileImg';
 
 export const UserProfilePostCreator = memo(() => {
   return (
     <Flex w='100%'>
-      <Avatar size='md' name='とづか' src='https://bit.ly/dan-abramov' />
+      <MyProfileImg size='md' />
       <Flex alignItems='center' w='100%'>
         <Textarea
           placeholder="いまどうしてる？"
