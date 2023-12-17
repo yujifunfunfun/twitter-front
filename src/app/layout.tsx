@@ -1,4 +1,3 @@
-import { ChakraProvider } from '@chakra-ui/react'
 import type { Metadata } from 'next'
 import "./globals.css";
 
@@ -14,9 +13,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
       <html lang="ja">
         <body className={"bg-black text-white"}>
-          <ChakraProvider>
             {children}
-          </ChakraProvider>
         </body>
       </html>
   )
