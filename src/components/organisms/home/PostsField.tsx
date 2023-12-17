@@ -5,6 +5,7 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel, Divider } from '@chakra-ui/rea
 
 import { TabListWithSettings } from './TabListWithSettings';
 import { CreatePost } from './CreatePost';
+import { DisplayNewPosts } from './DisplayNewPosts';
 
 
 export const PostsField = memo(() => {
@@ -16,7 +17,7 @@ export const PostsField = memo(() => {
       <CreatePost />
       <Divider />
 
-      <div>ポストを表示</div>
+      <DisplayNewPosts />
       <Divider />
 
       <TabPanels>
