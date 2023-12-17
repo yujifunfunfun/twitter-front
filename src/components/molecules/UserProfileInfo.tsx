@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Flex } from "@chakra-ui/react";
+import { Avatar, Box, Flex } from "@chakra-ui/react";
 import { ProfileImg } from "../atoms/ProfileImg";
 import { memo } from 'react';
 import { UserName } from "../atoms/UserName";
@@ -15,7 +15,7 @@ type UserProfileInfoProps =  {
 export const UserProfileInfo = memo(({src, userName, userId}: UserProfileInfoProps) => {
   return (
     <Flex>
-      <ProfileImg size='md' name={userName} src={src} />
+      <Avatar size='md' name={userName} src={src} />
       <Box ml={3}>
         <UserName userName={userName} />
         <UserId userId={userId} />

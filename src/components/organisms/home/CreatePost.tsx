@@ -1,12 +1,16 @@
 'use client'
 
 import React, { memo } from 'react';
-import { Box } from '@chakra-ui/react'
-
+import { VStack } from "@chakra-ui/react";
+import { UserProfilePostCreator } from './UserProfilePostCreator';
+import { PostActions } from './PostActions';
 
 export const CreatePost = memo(() => {
   return (
-    <Box></Box>
+    <VStack spacing={1} p={4}>
+      <UserProfilePostCreator />
+      <PostActions />
+    </VStack>
   )
 });
 
