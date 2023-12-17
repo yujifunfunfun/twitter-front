@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+## appディレクトリ配下の説明
+
+(auth)はログイン後に表示するページ
+(portal)は未ログイン時に表示するページ
+
+(auth)/home はtwitterのhomeページ
+
+
 ## Getting Started
 
 First, run the development server:
