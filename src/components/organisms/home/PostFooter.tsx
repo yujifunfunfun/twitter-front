@@ -19,8 +19,8 @@ export const PostFooter = memo(({replyCount, rePostCount, likeCount, displayCoun
   return (
     <Flex justifyContent='space-between' py='1' w='100%'>
       <IconBtnWithValue hoverColor='#1C9AEE' icon={<ChatIcon/>} value={replyCount} />
-      <IconBtnWithValue hoverColor='#1C9AEE' icon={<RepeatIcon/>} value={rePostCount} />
-      <IconBtnWithValue hoverColor='#1C9AEE' icon={<BsHeart/>} value={likeCount} />
+      <IconBtnWithValue hoverColor='#00c37b' icon={<RepeatIcon/>} value={rePostCount} />
+      <IconBtnWithValue hoverColor='#cd0000' icon={<BsHeart/>} value={likeCount} />
       <IconBtnWithValue hoverColor='#1C9AEE' icon={<ViewIcon/>} value={displayCount} />
       <HStack spacing={3}>
         <Icon as={BiBookmark} color="gray.500" />

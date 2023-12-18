@@ -4,7 +4,7 @@ import { SidebarContents } from './SidebarContents';
 
 export const Sidebar = memo(() => {
   return (
-    <Flex flexGrow='3' justifyContent='flex-end'>
+    <Flex flexGrow='3' justifyContent='flex-end' px={2}>
       <VStack
         color="white"
         height="100%"

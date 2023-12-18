@@ -7,7 +7,7 @@ import { PostActions } from './PostActions';
 
 export const CreatePost = memo(() => {
   return (
-    <VStack spacing={1} p={4}>
+    <VStack spacing={1} px={4} py={2}>
       <ProfileImgPostCreator />
       <PostActions />
     </VStack>

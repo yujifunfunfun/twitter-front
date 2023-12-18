@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 import { Providers } from '../providers'
 import { Sidebar } from '@/components/organisms/Sidebar'
-import { Box, Flex } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
+import { Main } from '@/components/template/Main'
 
 
 export const metadata: Metadata = {
@@ -15,13 +16,9 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     <Providers>
       <Flex minH='100vh'>
         <Sidebar />
-        <Box as='main' flexGrow='1'>
-          <Box w='990px'>
-            <Flex justifyContent='space-between' w='100%'>
-              {children}
-            </Flex>
-          </Box>
-        </Box>
+        <Main>
+          {children}
+        </Main>
       </Flex>
     </Providers>
 
