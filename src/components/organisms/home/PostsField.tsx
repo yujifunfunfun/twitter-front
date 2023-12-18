@@ -6,11 +6,12 @@ import { TabListWithSettings } from './TabListWithSettings';
 import { CreatePost } from './CreatePost';
 import { DisplayNewRecommendPosts } from './DisplayNewRecommendPosts';
 import { DisplayNewFollowingPosts } from './DisplayNewFollowingPosts';
+import { RecommendPosts } from './RecommendPosts';
 
 
 export const PostsField = memo(() => {
   return (
-    <Tabs borderLeft='1px solid #929396' borderRight='1px solid #929396' flexGrow='1' isFitted variant="unstyled">
+    <Tabs borderLeft='1px solid #929396' borderRight='1px solid #929396' flexGrow='1' isFitted variant="unstyled" maxW='600px'>
       <TabListWithSettings />
       <Divider />
       <CreatePost />
@@ -18,7 +19,7 @@ export const PostsField = memo(() => {
       <TabPanels>
         <TabPanel p='0'>
           <DisplayNewRecommendPosts />
-          <p>one!</p>
+          <RecommendPosts />
         </TabPanel>
         <TabPanel p='0'>
           <DisplayNewFollowingPosts />
@@ -29,3 +30,4 @@ export const PostsField = memo(() => {
   )
 });
 
+// TabPanelで分割するとしたら理由は可読性の向上？

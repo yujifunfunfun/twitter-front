@@ -1,9 +1,9 @@
 import React, { memo } from 'react';
-import { Box, Flex, VStack } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import UserMenu from "../molecules/UserMenu";
 import SidebarMenu from "./SidebarMenu";
-import { PrimaryButton } from "../atoms/button/PrimaryButton";
 import { XLogo } from "../atoms/XLogo";
+import { PostBtn } from '../atoms/button/PostBtn';
 
 export const SidebarContents = memo(() => {
   return (
@@ -11,11 +11,10 @@ export const SidebarContents = memo(() => {
       <VStack gap={5} align="start" width="100%">
         <XLogo />
         <SidebarMenu />
-        <PrimaryButton size='lg' w="90%" text="ポストする" />
+        <PostBtn size='lg' w="90%" />
       </VStack>
       <UserMenu />
     </>
   )
 });
 
-// VStackを分割したほうがいい気がするが、良い命名が思いつかない

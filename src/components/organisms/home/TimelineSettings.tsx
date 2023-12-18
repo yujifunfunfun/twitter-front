@@ -1,7 +1,7 @@
 'use client'
 
 import React, { memo } from 'react';
-import { Tabs, TabList, TabPanels, Tab, TabPanel, TabIndicator, Flex, Box, Icon, Divider } from '@chakra-ui/react'
+import { Flex, Icon } from '@chakra-ui/react'
 import { BiCog } from 'react-icons/bi';
 import Link from 'next/link';
 

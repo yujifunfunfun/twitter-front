@@ -17,5 +17,5 @@ export const DisplayNewPosts = memo(({newPostCount}: {newPostCount: number}) => 
   )
 });
 
-// Textは非同期データを表示するために使うから分割するが、BoxとFlexは分割するべきなのか？
+// BoxとFlexは分割するべきなのか？
 // そこまで細かくやる必要ない？

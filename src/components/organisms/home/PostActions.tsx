@@ -2,8 +2,9 @@
 
 import React, { memo } from 'react';
 import { HStack, Spacer } from "@chakra-ui/react";
-import { PrimaryButton } from '@/components/atoms/button/PrimaryButton';
+import { PrimaryBtn } from '@/components/atoms/button/PrimaryBtn';
 import { PostToolBar } from '@/components/molecules/PostToolBar';
+import { PostBtn } from '@/components/atoms/button/PostBtn';
 
 export const PostActions = memo(() => {
   return (
@@ -13,7 +14,7 @@ export const PostActions = memo(() => {
       <Spacer />
       <Spacer />
       <Spacer />
-      <PrimaryButton size='md' w='110px' text='ポストする' />
+      <PostBtn />
     </HStack>
   )
 });

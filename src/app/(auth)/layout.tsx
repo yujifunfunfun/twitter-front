@@ -13,10 +13,14 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
 
   return (
     <Providers>
-      <Flex >
+      <Flex minH='100vh'>
         <Sidebar />
-        <Box as='main' flexGrow='3'>
-          {children}
+        <Box as='main' flexGrow='1'>
+          <Box w='990px'>
+            <Flex justifyContent='space-between' w='100%'>
+              {children}
+            </Flex>
+          </Box>
         </Box>
       </Flex>
     </Providers>

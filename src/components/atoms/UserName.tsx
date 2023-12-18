@@ -1,7 +1,6 @@
 'use client'
 
-import { Box, Text } from "@chakra-ui/react";
-import { ProfileImg } from "./MyProfileImg";
+import { Text } from "@chakra-ui/react";
 import { memo } from 'react';
 
 type UserNameProps =  {

@@ -1,10 +1,10 @@
 import React, { memo } from 'react';
-import { Box, Flex, VStack } from "@chakra-ui/react";
+import { Flex, VStack } from "@chakra-ui/react";
 import { SidebarContents } from './SidebarContents';
 
 export const Sidebar = memo(() => {
   return (
-    <Flex flexGrow='1' justifyContent='flex-end'>
+    <Flex flexGrow='3' justifyContent='flex-end'>
       <VStack
         color="white"
         height="100%"
