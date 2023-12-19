@@ -16,7 +16,7 @@ export const RecommendUser = memo(({ name, username, avatar }: RecommendUserProp
     <LinkBox key={username} w='100%' _hover={{ bgColor: '#26292d' }}>
       <LinkOverlay href='#' />
       <Flex cursor='pointer' alignItems='center' justifyContent='space-between' py="3" px='4' >
-        <UserProfileInfo src={avatar} userName={name} userId={username} />
+        <UserProfileInfo src={avatar} name={name} username={username} />
         <FollowBtn size='sm'  />
       </Flex>
     </LinkBox>

@@ -2,7 +2,6 @@
 
 import React, { memo } from 'react';
 import { HStack, Spacer } from "@chakra-ui/react";
-import { PrimaryBtn } from '@/components/atoms/button/PrimaryBtn';
 import { PostToolBar } from '@/components/molecules/PostToolBar';
 import { PostBtn } from '@/components/atoms/button/PostBtn';
 

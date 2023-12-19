@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next'
 import { Providers } from '../providers'
 import { Sidebar } from '@/components/organisms/Sidebar'

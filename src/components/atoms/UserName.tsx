@@ -3,13 +3,13 @@
 import { Text } from "@chakra-ui/react";
 import { memo } from 'react';
 
-type UserNameProps =  {
-  userName: string;
+type Username =  {
+  username: string;
 }
 
-export const UserName = memo(({userName}: UserNameProps) => {
+export const Username = memo(({username}: Username) => {
   return (
-    <Text color="white" fontWeight="bold">{userName}</Text>
+    <Text color="gray.500">{username}</Text>
   );
 });
 

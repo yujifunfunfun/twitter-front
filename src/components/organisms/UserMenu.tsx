@@ -1,10 +1,17 @@
 'use client'
 
 import { Flex } from "@chakra-ui/react";
-import { UserProfileInfo } from "./UserProfileInfo";
+import { UserProfileInfo } from "../molecules/UserProfileInfo";
 import { ThreeDots } from "../atoms/ThreeDots";
+import useSWR from "swr";
+import { memo } from "react";
+import { MyUserInfo } from "./MyUserInfo";
 
-export default function UserMenu() {
+
+export const UserMenu = memo(() => {
+
+
+
   return (
     <Flex
       role="button"
@@ -16,8 +23,8 @@ export default function UserMenu() {
       w='100%'
       _hover={{backgroundColor: "#17181D"}}
     >
-      <UserProfileInfo src='https://bit.ly/dan-abramov' userName='とづか' userId='@tozuji516' />
+      <MyUserInfo />
       <ThreeDots color='white' />
     </Flex>
   );
-}
+})

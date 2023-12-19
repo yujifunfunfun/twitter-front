@@ -2,22 +2,22 @@
 
 import { Avatar, Box, Flex } from "@chakra-ui/react";
 import { memo } from 'react';
-import { UserName } from "../atoms/UserName";
-import { UserId } from "../atoms/UserId";
+import { Name } from "../atoms/Name";
+import { Username } from "../atoms/Username";
 
 type UserProfileInfoProps =  {
   src: string;
-  userName: string;
-  userId: string;
+  name: string;
+  username: string;
 }
 
-export const UserProfileInfo = memo(({src, userName, userId}: UserProfileInfoProps) => {
+export const UserProfileInfo = memo(({src, name, username}: UserProfileInfoProps) => {
   return (
     <Flex>
-      <Avatar size='md' name={userName} src={src} />
+      <Avatar size='md' name={name} src={src} />
       <Box ml={3}>
-        <UserName userName={userName} />
-        <UserId userId={userId} />
+        <Name name={name} />
+        <Username username={username} />
       </Box>
     </Flex>
   );

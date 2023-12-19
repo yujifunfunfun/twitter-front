@@ -1,5 +1,6 @@
+import { Box, Flex } from '@chakra-ui/react'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Providers } from '../providers'
 
 
 export const metadata: Metadata = {
@@ -8,13 +9,16 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
-
-
-
-
   return (
-    <>
-      {children}
-    </>
+    <Providers>
+      <Flex
+        minH='100vh'
+        alignItems='center'
+        justifyContent='center'
+        direction='column'
+      >
+        {children}
+      </Flex>
+    </Providers>
   )
 }
