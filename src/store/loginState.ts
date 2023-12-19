@@ -23,7 +23,7 @@ export const useAuthenticate = () => {
   return useRecoilCallback(({ snapshot }) => async (data: any) => {
     setIsLoadingAuth(true);
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      const apiUrl = process.env.NEXT_PUBLIC_URL;
       const response = await axios.post(
         `${apiUrl}authen/jwt/create/`,
         data,

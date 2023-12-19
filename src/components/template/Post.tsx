@@ -9,9 +9,9 @@ import { PostContent } from '../organisms/home/PostContent';
 
 type PostProps =  {
   postId: string;
-  profileImdUrl: string;
-  userName: string;
-  userId: string;
+  profileImgUrl: string;
+  name: string;
+  username: string;
   elapsedTimeSincePost: string;
   text: string;
   postImgUrl: string;
@@ -23,9 +23,9 @@ type PostProps =  {
 
 export const Post = memo(({
   postId,
-  profileImdUrl,
-  userName,
-  userId,
+  profileImgUrl,
+  name,
+  username,
   elapsedTimeSincePost,
   text,
   postImgUrl,
@@ -36,12 +36,12 @@ export const Post = memo(({
 }: PostProps) => {
   return (
     <>
-      <LinkBox w="100%" p={2} _hover={{ bgColor: '#17191C' }} zIndex={0}>
+      <LinkBox role='button' w="100%" p={2} _hover={{ bgColor: '#17191C' }} >
         <LinkOverlay href="https://twitter.com/" isExternal />
         <HStack spacing={4} align="start">
-          <Avatar src="https://pbs.twimg.com/profile_images/1685187919781486592/XAN7U8JP_normal.jpg" />
+          <Avatar src={profileImgUrl} />
           <VStack align="start" spacing={1} w='100%'>
-            <PostHeader userName={userName} userId={userId} elapsedTimeSincePost={elapsedTimeSincePost} />
+            <PostHeader postId={postId} name={name} username={username} elapsedTimeSincePost={elapsedTimeSincePost} />
             <PostContent text={text} postImgUrl={postImgUrl} />
             <PostFooter replyCount={replyCount} rePostCount={rePostCount} likeCount={likeCount} displayCount={displayCount} />
           </VStack>
@@ -53,3 +53,4 @@ export const Post = memo(({
 });
 
 // HStackで分割した方がいいかも？
+// recoilで渡したほうがいいかも？

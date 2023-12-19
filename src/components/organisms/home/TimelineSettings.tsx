@@ -1,20 +1,22 @@
 'use client'
 
 import React, { memo } from 'react';
-import { Flex, Icon } from '@chakra-ui/react'
+import { Button, Flex, Icon } from '@chakra-ui/react'
 import { BiCog } from 'react-icons/bi';
-import Link from 'next/link';
 
 
 export const TimelineSettings = memo(() => {
   return (
-    <Flex direction="row" alignItems="center" justifyContent="center" px='5'>
-      <Link href="/home/pinned/edit" aria-label="タイムライン設定">
+    <Flex direction="row" alignItems="center" justifyContent="center" px='2'>
+      <Button
+        size='xs'
+        variant='ghost'
+        _hover={{ bg: 'none'}}
+      >
         <Icon as={BiCog} boxSize='20px' color="rgb(239, 243, 244)" />
-      </Link>
+      </Button>
     </Flex>
 
   )
 });
 
-// Linkで分割すべきだろうが、明確な理由が知りたい

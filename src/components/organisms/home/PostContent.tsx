@@ -12,7 +12,7 @@ export const PostContent = memo(({text, postImgUrl}: PostContentProps) => {
   return (
     <>
       <Text>{text}</Text>
-      <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' w="100%" h="auto" />
+      {postImgUrl && <Image src={postImgUrl} alt='' w="100%" h="auto" />}
     </>
   )
 });
