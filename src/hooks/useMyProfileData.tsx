@@ -6,7 +6,7 @@ type ProfileData = {
 };
 
 export const useMyProfileData = () => {
-  const { data: profile, error: profileError, isLoading: isLoadingProfile } = useSWR<ProfileData>(`api/profiles/me/`)
+  const { data: profile, error: profileError, isLoading: isLoadingProfile } = useSWR<ProfileData>(`profiles/me/`)
 
   return { profile, profileError, isLoadingProfile };
 }

@@ -6,7 +6,7 @@ type UserData = {
 };
 
 export const useMyUserData = () => {
-  const { data: user, error: userError, isLoading: isLoadingUser } = useSWR<UserData>(`api/users/me/`)
+  const { data: user, error: userError, isLoading: isLoadingUser } = useSWR<UserData>(`users/me/`)
 
   return { user, userError, isLoadingUser };
 }

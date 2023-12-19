@@ -1,23 +1,16 @@
 'use client'
 
 import React, { memo } from 'react';
-import { Textarea, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { MyProfileImg } from '@/components/atoms/MyProfileImg';
+import { PostTextInput } from '@/components/atoms/PostTextInput';
+import { Control, FieldValues } from 'react-hook-form';
 
-export const ProfileImgPostCreator = memo(() => {
+export const ProfileImgPostCreator = memo(({control}: {control:Control<FieldValues, any>}) => {
   return (
     <Flex w='100%'>
       <MyProfileImg size='md' />
-      <Flex alignItems='center' w='100%'>
-        <Textarea
-          placeholder="いまどうしてる？"
-          border='none'
-          borderRadius='none'
-          _focus={{ borderBottom: '1px solid #929396', outline: 'none', boxShadow: 'none' }}
-          rows={1}
-          fontSize="lg"
-        />
-      </Flex>
+      <PostTextInput control={control} />
     </Flex>
   )
 });

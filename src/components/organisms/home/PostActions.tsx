@@ -13,9 +13,10 @@ export const PostActions = memo(() => {
       <Spacer />
       <Spacer />
       <Spacer />
-      <PostBtn />
+      <PostBtn type='submit' />
     </HStack>
   )
 });
 
 // Spacerありすぎて、なんか違う気がする。
+// 数指定してその分だけSpacerが作られる関数をつくるのがいい？
