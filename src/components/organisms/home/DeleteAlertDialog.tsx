@@ -12,6 +12,7 @@ import {
   Button,
 } from '@chakra-ui/react'
 import { DeletePostBtn } from "@/components/atoms/button/DeletePostBtn";
+import { DialogContainer } from "@/components/atoms/dialog/DialogContainer";
 
 export const DeleteAlertDialog = memo(({postId}: {postId: string}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -29,13 +30,7 @@ export const DeleteAlertDialog = memo(({postId}: {postId: string}) => {
         削除
       </Button>
 
-      <AlertDialog
-        isOpen={isOpen}
-        isCentered
-        leastDestructiveRef={cancelRef}
-        onClose={onClose}
-        size='sm'
-      >
+      <DialogContainer isOpen={isOpen} leastDestructiveRef={cancelRef} onClose={onClose} size='sm'>
         <AlertDialogOverlay bg='rgba(91, 112, 131, 0.4)'>
           <AlertDialogContent bg='black'>
             <AlertDialogHeader fontSize='lg' fontWeight='bold'>
@@ -54,7 +49,21 @@ export const DeleteAlertDialog = memo(({postId}: {postId: string}) => {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialogOverlay>
-      </AlertDialog>
+      </DialogContainer>
     </>
   );
 })
+
+// <DeleteButton onOpen={onOpen} />
+
+// <DeleteDialog isOpen={isOpen} leastDestructiveRef={cancelRef} onClose={onClose} size='sm'>
+//   <DialogOverlay>
+//     <DialogContent>
+//       <DialogHeader />
+//       <DialogBody />
+//       <DialogFooter cancelRef={cancelRef} onClose={onClose} postId={postId} />
+//     </DialogContent>
+//   </DialogOverlay>
+// </DeleteDialog>
+
+// 上記のように一つ一つ分割したほうが良いのか？

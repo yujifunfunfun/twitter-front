@@ -9,7 +9,7 @@ type Username =  {
 
 export const Username = memo(({username}: Username) => {
   return (
-    <Text color="gray.500">{username}</Text>
+    <Text color="gray.500">@{username}</Text>
   );
 });
 

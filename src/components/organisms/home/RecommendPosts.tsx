@@ -9,6 +9,7 @@ export const RecommendPosts = memo(() => {
   if (isLoadingPosts) return null
   if (!posts) return null
 
+
   return posts.map((post) => (
     <Post
       key={post.id}
@@ -19,7 +20,7 @@ export const RecommendPosts = memo(() => {
       elapsedTimeSincePost={post.posted_at}
       text={post.text}
       postImgUrl={post.img}
-      replyCount={post.liked.length}
+      replyCount={post.reply_posts_count}
       rePostCount={post.liked.length}
       likeCount={post.liked.length}
       displayCount={post.liked.length}

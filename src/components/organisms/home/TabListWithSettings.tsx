@@ -8,7 +8,7 @@ import { NavTabWithIndicator } from './NavTabWithIndicator';
 
 export const TabListWithSettings = memo(() => {
   return (
-    <Flex>
+    <Flex position='sticky' top='0' bg='rgba(0, 0, 0, 0.805)' backdropFilter='blur(12px)' zIndex={1}>
       <NavTabWithIndicator labels={['おすすめ', 'フォロー中']} />
       <TimelineSettings />
     </Flex>

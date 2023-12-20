@@ -5,7 +5,7 @@ import { memo } from "react";
 import { SearchBox } from "../SearchBox";
 import { RecommendUsersSection } from "./RecommendUsersSection";
 
-export const SideColumn = memo(() => {
+export const HomeSideColumn = memo(() => {
 
   return (
     <Box w='100%' maxW="350px">

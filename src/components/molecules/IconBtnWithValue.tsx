@@ -12,6 +12,7 @@ export const IconBtnWithValue: React.FC<IconBtnWithValueProps> = memo(({ hoverCo
       color='gray.500'
       size='sm'
       variant='ghost'
+      p='0'
       leftIcon={icon}
       _active={{}}
       _hover={{ color: hoverColor }}

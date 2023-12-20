@@ -3,7 +3,7 @@
 import React, { memo } from 'react';
 import { Divider, LinkOverlay } from "@chakra-ui/react";
 import { VStack, HStack, Avatar, LinkBox } from "@chakra-ui/react";
-import { PostFooter } from '../organisms/home/PostFooter';
+import { PostFooter } from '@/components/organisms/home/PostFooter';
 import { PostHeader } from '../organisms/home/PostHeader';
 import { PostContent } from '../organisms/home/PostContent';
 
@@ -37,7 +37,7 @@ export const Post = memo(({
   return (
     <>
       <LinkBox role='button' w="100%" p={2} _hover={{ bgColor: '#17191C' }} >
-        <LinkOverlay href="https://twitter.com/" isExternal />
+        <LinkOverlay href={`/${username}/status/${postId}`} />
         <HStack spacing={4} align="start">
           <Avatar src={profileImgUrl} />
           <VStack align="start" spacing={1} w='100%'>

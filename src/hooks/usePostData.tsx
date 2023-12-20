@@ -1,7 +1,7 @@
 // src/hooks/useUserData.ts
 import useSWR from "swr";
 
-type RecommendedPostsData = {
+type usePostData = {
   username: string;
   name: string;
   profile_id: string;
@@ -12,10 +12,10 @@ type RecommendedPostsData = {
   img: string;
   liked: string[];
   posted_at: string;
-}[];
+};
 
-export const useRecommendedPostsData = () => {
-  const { data: posts, error: postsError, isLoading: isLoadingPosts } = useSWR<RecommendedPostsData>(`posts/recommended/`)
+export const usePostData = (postId: string) => {
+  const { data: post, error: postError, isLoading: isLoadingPost } = useSWR<usePostData>(`posts/${postId}/`)
 
-  return { posts, postsError, isLoadingPosts };
+  return { post, postError, isLoadingPost };
 }
