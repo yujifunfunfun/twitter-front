@@ -7,7 +7,7 @@ import { PostActions } from './PostActions';
 import { useFormSubmit } from '@/hooks/usePostForm';
 
 export const CreatePost = memo(() => {
-  const { control, loading, handleSubmit } = useFormSubmit();
+  const { control, isLoading, handleSubmit } = useFormSubmit();
 
   return (
     <form onSubmit={handleSubmit} encType="multipart/form-data">

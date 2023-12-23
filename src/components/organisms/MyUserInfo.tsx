@@ -2,12 +2,12 @@
 
 import { UserProfileInfo } from "../molecules/UserProfileInfo";
 import { memo } from "react";
-import { useMyUserData } from "@/hooks/useMyUserData";
-import { useMyProfileData } from "@/hooks/useMyProfileData";
+import { useFetchMyUser } from "@/hooks/useFetchMyUser";
+import { useFetchMyProfile } from "@/hooks/useFetchMyProfile";
 
 export const MyUserInfo = memo(() => {
-  const { user, isLoadingUser } = useMyUserData();
-  const { profile, isLoadingProfile } = useMyProfileData();
+  const { user, isLoadingUser } = useFetchMyUser();
+  const { profile, isLoadingProfile } = useFetchMyProfile();
   if (isLoadingUser || isLoadingProfile) return null
   if (!user || !profile) return null
 

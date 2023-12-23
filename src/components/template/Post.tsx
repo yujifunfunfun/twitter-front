@@ -19,6 +19,7 @@ type PostProps =  {
   rePostCount: number;
   likeCount: number;
   displayCount: number;
+  liked: string[];
 }
 
 export const Post = memo(({
@@ -33,6 +34,7 @@ export const Post = memo(({
   rePostCount,
   likeCount,
   displayCount,
+  liked,
 }: PostProps) => {
   return (
     <>
@@ -43,7 +45,7 @@ export const Post = memo(({
           <VStack align="start" spacing={1} w='100%'>
             <PostHeader postId={postId} name={name} username={username} elapsedTimeSincePost={elapsedTimeSincePost} />
             <PostContent text={text} postImgUrl={postImgUrl} />
-            <PostFooter replyCount={replyCount} rePostCount={rePostCount} likeCount={likeCount} displayCount={displayCount} />
+            <PostFooter replyCount={replyCount} rePostCount={rePostCount} likeCount={likeCount} displayCount={displayCount} liked={liked} />
           </VStack>
         </HStack>
       </LinkBox>

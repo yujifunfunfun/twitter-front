@@ -1,30 +1,26 @@
 import { customAxios } from '@/lib/customAxios';
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { FieldValues, UseFormReset } from 'react-hook-form';
 import { useSWRConfig } from 'swr';
 
-export const useFormSubmit = () => {
+export const useSubmitReplyPost = (postId: string, reset: UseFormReset<FieldValues>) => {
   const [isLoading, setLoading] = useState(false);
-  const { control, handleSubmit, reset } = useForm({});
   const { mutate } = useSWRConfig();
 
   const onSubmit = async (data: any) => {
     setLoading(true);
     try {
       const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-      const res = await customAxios.post(`${apiUrl}posts/`, data);
+      const res = await customAxios.post(`${apiUrl}posts/${postId}/reply/`, data);
       reset();
-      mutate(`posts/recommended/`);
+      mutate(`posts/${postId}/reply/`);
+      mutate(`posts/${postId}/`);
+
     } catch (error: any) {
       console.log(error)
     } finally {
       setLoading(false);
     }
   };
-
-  return { control, isLoading, handleSubmit: handleSubmit(onSubmit) };
+  return { isLoading, onSubmit };
 };
-
-
-// onSubmitはこのままでいいのか？
-// 別のファイルに分けたほうがいいのか？

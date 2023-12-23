@@ -2,10 +2,14 @@
 
 import React, { memo } from 'react';
 import { Post } from '@/components/template/Post';
-import { useFetchRecommendedPosts } from '@/hooks/useFetchRecommendedPosts';
+import { useFetchReplyPosts } from '@/hooks/useFetchReplyPosts';
 
-export const RecommendPosts = memo(() => {
-  const { posts, isLoadingPosts } = useFetchRecommendedPosts();
+type ReplyPostsProps = {
+  postId: string;
+}
+
+export const ReplyPosts = memo(({postId}: ReplyPostsProps) => {
+  const { posts, isLoadingPosts } = useFetchReplyPosts(postId);
   if (isLoadingPosts) return null
   if (!posts) return null
 

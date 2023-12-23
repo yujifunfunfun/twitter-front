@@ -1,6 +1,6 @@
 'use client'
 
-import { useMyProfileData } from "@/hooks/useMyProfileData";
+import { useFetchMyProfile } from "@/hooks/useFetchMyProfile";
 import { Avatar } from "@chakra-ui/react";
 import { memo } from "react";
 
@@ -9,7 +9,7 @@ type MyProfileImgProps =  {
 }
 
 export const MyProfileImg = memo(({size}: MyProfileImgProps) => {
-  const { profile, isLoadingProfile } = useMyProfileData();
+  const { profile, isLoadingProfile } = useFetchMyProfile();
   if (isLoadingProfile) return null
   if (!profile) return null
 

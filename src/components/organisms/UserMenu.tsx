@@ -1,9 +1,7 @@
 'use client'
 
 import { Flex } from "@chakra-ui/react";
-import { UserProfileInfo } from "../molecules/UserProfileInfo";
 import { ThreeDots } from "../atoms/ThreeDots";
-import useSWR from "swr";
 import { memo } from "react";
 import { MyUserInfo } from "./MyUserInfo";
 

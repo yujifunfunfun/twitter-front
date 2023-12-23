@@ -20,7 +20,7 @@ export const useAuthenticate = () => {
   const setErrorMessage = useSetRecoilState(errorMessageState);
   const router = useRouter();
 
-  return useRecoilCallback(({ snapshot }) => async (data: any) => {
+  return useRecoilCallback(({ }) => async (data: any) => {
     setIsLoadingAuth(true);
     try {
       const apiUrl = process.env.NEXT_PUBLIC_URL;

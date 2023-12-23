@@ -14,7 +14,7 @@ type RecommendedPostsData = {
   posted_at: string;
 }[];
 
-export const useRecommendedPostsData = () => {
+export const useFetchRecommendedPosts = () => {
   const { data: posts, error: postsError, isLoading: isLoadingPosts } = useSWR<RecommendedPostsData>(`posts/recommended/`)
 
   return { posts, postsError, isLoadingPosts };

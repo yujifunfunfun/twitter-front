@@ -7,21 +7,42 @@ import { usePostData } from "@/hooks/usePostData";
 import { CircularLoading } from "@/components/atoms/loading/CircularLoading";
 import { PostFooter } from "../home/PostFooter";
 
-export const PostContentsSection = memo(({postId}: {postId: string}) => {
-  const { post, isLoadingPost } = usePostData(postId);
-  if (isLoadingPost) return <CircularLoading />
-  if (!post) return null
 
+type PostContentsSectionProps =  {
+  postId: string;
+  profileImgUrl: string;
+  name: string;
+  username: string;
+  text: string;
+  img: string;
+  postedAt: string;
+  replyPostsCount: number;
+  likedCount: number;
+}
+
+
+
+export const PostContentsSection = memo(({
+  postId,
+  profileImgUrl,
+  name,
+  username,
+  text,
+  img,
+  postedAt,
+  replyPostsCount,
+  likedCount
+}: PostContentsSectionProps) => {
 
   return (
     <Box px='4'>
-      <PostDetailHeader postId={postId} profileImgUrl={post.profile_img} name={post.name} username={post.username} />
+      <PostDetailHeader postId={postId} profileImgUrl={profileImgUrl} name={name} username={username} />
       <VStack gap={2} mt={3} alignItems='start' w='100%'>
-        <PostContent text={post.text} postImgUrl={post.img} />
-        <Text color="gray.500">{post.posted_at}</Text>
+        <PostContent text={text} postImgUrl={img} />
+        <Text color="gray.500">{postedAt}</Text>
       </VStack>
       <Box borderTop='0.5px solid #616E80' borderBottom='0.5px solid #616E80' mt={4} px={1}>
-        <PostFooter replyCount={post.reply_posts_count} rePostCount={post.liked.length} likeCount={post.liked.length} displayCount={post.liked.length} />
+        <PostFooter replyCount={replyPostsCount} rePostCount={likedCount} likeCount={likedCount} displayCount={likedCount} />
       </Box>
     </Box>
 
