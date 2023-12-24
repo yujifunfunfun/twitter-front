@@ -3,9 +3,9 @@
 import React, { memo } from 'react';
 import { Divider, LinkOverlay } from "@chakra-ui/react";
 import { VStack, HStack, Avatar, LinkBox } from "@chakra-ui/react";
-import { PostFooter } from '@/components/organisms/home/PostFooter';
-import { PostHeader } from '../organisms/home/PostHeader';
-import { PostContent } from '../organisms/home/PostContent';
+import { PostFooter } from '@/components/organisms/posts/card/PostFooter';
+import { PostHeader } from '../organisms/posts/card/PostHeader';
+import { PostContent } from '../organisms/posts/card/PostContent';
 
 type PostProps =  {
   postId: string;

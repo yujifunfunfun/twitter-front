@@ -1,6 +1,6 @@
 'use client'
 
-import { UserProfileInfo } from "../molecules/UserProfileInfo";
+import { UserProfileInfo } from "../../molecules/UserProfileInfo";
 import { memo } from "react";
 import { useFetchMyUser } from "@/hooks/useFetchMyUser";
 import { useFetchMyProfile } from "@/hooks/useFetchMyProfile";

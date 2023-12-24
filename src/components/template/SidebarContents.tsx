@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { VStack } from "@chakra-ui/react";
-import {UserMenu} from "./UserMenu";
+import {UserMenu} from "../organisms/users/UserMenu";
 import SidebarMenu from "./SidebarMenu";
 import { XLogo } from "../atoms/XLogo";
 import { PostBtn } from '../atoms/button/PostBtn';

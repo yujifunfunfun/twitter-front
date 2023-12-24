@@ -2,8 +2,8 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { InputGroup, InputRightElement, Box } from "@chakra-ui/react";
-import { SearchInput } from '../atoms/SearchInput';
-import { SearchBtn } from '../atoms/button/SearchBtn';
+import { SearchInput } from '../../../atoms/SearchInput';
+import { SearchBtn } from '../../../atoms/button/SearchBtn';
 
 
 export const SearchBox = () => {

@@ -1,6 +1,6 @@
 import React from "react";
-import { HomeSideColumn } from "@/components/organisms/home/HomeSideColumn";
-import { PostDetail } from "@/components/organisms/post/PostDetail";
+import { HomeSideColumn } from "@/app/(auth)/home/HomeSideColumn";
+import { PostDetail } from "@/app/(auth)/[username]/status/[postId]/PostDetail";
 
 const Post = ({params}:{params: {postId: string}}) => {
 

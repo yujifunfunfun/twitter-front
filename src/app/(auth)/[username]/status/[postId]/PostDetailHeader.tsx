@@ -3,7 +3,7 @@
 import { memo } from "react";
 import { Flex } from "@chakra-ui/react";
 import { UserProfileInfo } from "@/components/molecules/UserProfileInfo";
-import { MyPostPopover } from "../home/MyPostPopover";
+import { MyPostPopover } from "../../../../../components/organisms/posts/card/MyPostPopover";
 
 type PostDetailHeaderProps =  {
   postId: string;

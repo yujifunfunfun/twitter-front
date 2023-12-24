@@ -1,5 +1,5 @@
-import { PostsField } from '@/components/organisms/home/PostsField';
-import { HomeSideColumn } from '@/components/organisms/home/HomeSideColumn';
+import { PostsField } from '@/app/(auth)/home/PostsField';
+import { HomeSideColumn } from '@/app/(auth)/home/HomeSideColumn';
 import React from 'react';
 
 const Home = () => {

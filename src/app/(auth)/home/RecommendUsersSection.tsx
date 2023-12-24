@@ -2,7 +2,7 @@
 
 import { Box, Text, Link } from "@chakra-ui/react";
 import { memo } from "react";
-import { RecommendUsers } from "./RecommendUsers";
+import { RecommendUsers } from "../../../components/organisms/users/RecommendUsers";
 
 export const RecommendUsersSection = memo(() => {
 

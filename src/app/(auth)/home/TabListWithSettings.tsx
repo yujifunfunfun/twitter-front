@@ -2,8 +2,8 @@
 
 import React, { memo } from 'react';
 import { Flex } from '@chakra-ui/react'
-import { TimelineSettings } from './TimelineSettings';
-import { NavTabWithIndicator } from './NavTabWithIndicator';
+import { TimelineSettings } from '../../../components/organisms/TimelineSettings';
+import { NavTabWithIndicator } from '../../../components/organisms/NavTabWithIndicator';
 
 
 export const TabListWithSettings = memo(() => {

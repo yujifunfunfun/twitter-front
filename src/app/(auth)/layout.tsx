@@ -1,7 +1,7 @@
 
 import type { Metadata } from 'next'
 import { Providers } from '../providers'
-import { Sidebar } from '@/components/organisms/Sidebar'
+import { Sidebar } from '@/components/template/Sidebar'
 import { Flex } from '@chakra-ui/react'
 import { Main } from '@/components/template/Main'
 

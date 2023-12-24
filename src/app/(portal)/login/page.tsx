@@ -1,5 +1,5 @@
 import React from 'react'
-import { LoginForm } from '@/components/organisms/login/LoginForm'
+import { LoginForm } from '@/app/(portal)/login/LoginForm'
 
 
 const Login = () => {

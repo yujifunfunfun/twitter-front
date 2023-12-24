@@ -4,12 +4,12 @@
 import { memo } from "react";
 import { Box, Divider } from "@chakra-ui/react";
 import { PageBackSection } from "./PageBackSection";
-import { PostContentsSection } from "./PostContentsSection";
-import { ReplyForm } from "./ReplyForm";
-import { RecommendPosts } from "../home/RecommendPosts";
+import { PostContentsSection } from "../../../../../components/organisms/posts/card/PostContentsSection";
+import { ReplyForm } from "../../../../../components/organisms/posts/reply/ReplyForm";
+import { RecommendPosts } from "../../../home/RecommendPosts";
 import { usePostData } from "@/hooks/usePostData";
 import { CircularLoading } from "@/components/atoms/loading/CircularLoading";
-import { ReplyPosts } from "./ReplyPosts";
+import { ReplyPosts } from "../../../../../components/organisms/posts/reply/ReplyPosts";
 
 export const PostDetail = memo(({postId}: {postId: string}) => {
   const { post, isLoadingPost } = usePostData(postId);

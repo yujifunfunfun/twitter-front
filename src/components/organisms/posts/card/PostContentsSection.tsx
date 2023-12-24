@@ -1,11 +1,11 @@
 
 import { memo } from "react";
 import { Box, Text, VStack } from "@chakra-ui/react";
-import { PostDetailHeader } from "./PostDetailHeader";
-import { PostContent } from "../home/PostContent";
+import { PostDetailHeader } from "../../../../app/(auth)/[username]/status/[postId]/PostDetailHeader";
+import { PostContent } from "./PostContent";
 import { usePostData } from "@/hooks/usePostData";
 import { CircularLoading } from "@/components/atoms/loading/CircularLoading";
-import { PostFooter } from "../home/PostFooter";
+import { PostFooter } from "./PostFooter";
 
 
 type PostContentsSectionProps =  {
@@ -42,7 +42,7 @@ export const PostContentsSection = memo(({
         <Text color="gray.500">{postedAt}</Text>
       </VStack>
       <Box borderTop='0.5px solid #616E80' borderBottom='0.5px solid #616E80' mt={4} px={1}>
-        <PostFooter replyCount={replyPostsCount} rePostCount={likedCount} likeCount={likedCount} displayCount={likedCount} />
+        <PostFooter replyCount={replyPostsCount} rePostCount={likedCount} likeCount={likedCount} displayCount={likedCount} liked={[]} />
       </Box>
     </Box>
 

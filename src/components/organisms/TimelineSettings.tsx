@@ -16,7 +16,6 @@ export const TimelineSettings = memo(() => {
         <Icon as={BiCog} boxSize='20px' color="rgb(239, 243, 244)" />
       </Button>
     </Flex>
-
   )
 });
 

@@ -14,7 +14,7 @@ import {
 import { DeletePostBtn } from "@/components/atoms/button/DeletePostBtn";
 import { DialogContainer } from "@/components/atoms/dialog/DialogContainer";
 
-export const DeleteAlertDialog = memo(({postId}: {postId: string}) => {
+export const PostDeleteAlertDialog = memo(({postId}: {postId: string}) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const cancelRef = useRef<HTMLButtonElement | null>(null)
   return (

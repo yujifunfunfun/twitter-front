@@ -3,7 +3,7 @@
 import React, { memo } from 'react';
 import { Tabs, TabPanels, TabPanel, Divider } from '@chakra-ui/react'
 import { TabListWithSettings } from './TabListWithSettings';
-import { CreatePost } from './CreatePost';
+import { CreatePost } from '../../../components/organisms/posts/forms/CreatePost';
 import { DisplayNewRecommendPosts } from './DisplayNewRecommendPosts';
 import { DisplayNewFollowingPosts } from './DisplayNewFollowingPosts';
 import { RecommendPosts } from './RecommendPosts';
